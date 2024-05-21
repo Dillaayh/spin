@@ -1,0 +1,240 @@
+/*-----------------  GOOGLE FONTS  -----------------*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+/*-----------------  VARIABLES  -----------------*/
+:root {
+    /* Colors */ 
+    --white_color: rgb(255, 255, 255);
+    --gold_color: rgb(255, 215, 0);
+    --green_color: rgb(38, 236, 20);
+    --body_background: linear-gradient(to right, #141e30, #243b55);
+    --spin_background: linear-gradient(to right, #fc4a1a, #f7b733);
+}
+
+/*-----------------  Base  -----------------*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'PT Serif', serif;
+}
+
+body {
+    height: 100vh;
+    background: var(--body_background);
+    overflow-x: hidden;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/*-----------------  Header  -----------------*/
+.head {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    z-index: 1;
+    width: 400px;
+    margin: auto;
+}
+
+.content h1 {
+    font-size: 50px;
+}
+
+a, button {
+    border: 2px solid #f90;
+    color: #0a0909;
+    font-size: 1.2rem;
+    padding: 10px;
+    text-decoration: none;
+    background: none;
+    cursor: pointer;
+}
+
+/*-----------------  Styling Start  -----------------*/
+h1 {
+    position: absolute;
+    font-size: 4rem;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--gold_color);
+}
+
+.container {
+    width: 90%;
+    max-width: 34.37rem;
+    margin-top: 3rem;
+    max-height: 90vh;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 3rem; 
+    border-radius: 1rem;
+}
+
+.wheel_box {
+    position: relative;
+    width: 100%;
+    height: 10%;
+}
+
+#spinWheel {
+    max-height: inherit;
+    width: inherit;
+    transform: rotate(270deg);
+}
+
+#spin_btn {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 26%;
+    width: 26%;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0;
+    background: var(--spin_background);
+    color: var(--white_color);
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+}
+
+.fa-solid {
+    position: absolute;
+    top: -8%;
+    left: 43.7%;
+    font-size: 4rem;
+    color: var(--green_color);
+    transform: rotate(-228deg);
+}
+
+#text {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    color: var(--gold_color);
+    font-weight: 500;
+}
+
+/*-----------------  Custom Styles  -----------------*/
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 30px solid rgb(14, 14, 14);
+    position: absolute;
+    top: 50%;
+    right: -220%;
+    transform: translateY(-50%);
+}
+
+textarea {
+    background-color: rgba(20, 20, 20, 0.2);
+    caret-color: #0c0c0c;
+    resize: none;
+    color: #151313;
+    text-align: left;
+}
+
+.inputArea {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 40px;
+}
+
+/* CSS */
+.balance-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: #0f0f0f;
+    font-size: 14px;
+    z-index: 9999;
+}
+
+/* Add this to your style.css */
+
+.betting-form {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.7); /* Ubah opacity sesuai kebutuhan */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Efek bayangan untuk tampilan 3D */
+    color: #000; /* Warna teks */
+}
+
+
+/* Gaya untuk balance-box */
+.balance-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.balance-box label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.balance-box input[type="number"] {
+    width: 100px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+/* Gaya untuk betting-form */
+.betting-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.betting-form h2 {
+    margin-bottom: 10px;
+}
+
+.betting-form label, .betting-form select, .betting-form input[type="number"] {
+    display: block;
+    margin: 5px auto;
+}
+
+.betting-form button[type="submit"] {
+    display: block;
+    margin: 10px auto;
+}

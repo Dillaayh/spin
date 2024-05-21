@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheel of Fortune</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Chart JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <!-- Chart JS Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script> 
+</head>
+<body>
+  <header class="wrapper head">
+    <div class="box">
+      <video id="background-video" src="Doraemon ~ Original Theme Song.mp4" autoplay loop muted></video>
+    </div>
+    <div class="content"></div>
+  </header>
+
+  <h1>CATSPIN</h1>
+
+  <div class="container">
+      <div class="wheel_box">
+          <canvas id="spinWheel"></canvas>
+          <button id="spin_btn">Spin</button>
+          <i class="fa-solid fa-location-arrow"></i>
+      </div> 
+      <div id="text"><p>Wheel Of Fortune</p></div>
+      <!-- Audio Elements -->
+      <audio id="spin-sound" src="Doraemon-_-Original-Theme-Song.mp3" preload="auto"></audio>
+      <audio id="win-sound" src="winner.mp3" preload="auto"></audio>
+  </div>
+
+
+  <div class="betting-form">
+      <h2>Place Your Bet</h2>
+      <form id="betForm">
+          <div class="balance-box">
+          <label for="balanceInput">Saldo:</label>
+          <input type="number" id="balanceInput" name="balanceInput" min="0" value="1000" required>
+          <!-- <button id="updateBalanceBtn">Update</button> -->
+          </div>
+          <label for="betAmount">jumlah uang taruhan:</label>
+          <input type="number" id="betAmount" name="betAmount" required>
+          <label for="betChoice">taruhan :</label>
+          
+          <select id="betChoice" name="betChoice">
+              <option value="500">500</option>
+              <option value="600">600</option>
+              <option value="700">700</option>
+              <option value="800">800</option>
+              <option value="900">900</option>
+              <option value="1000">1000</option>
+              <option value="11000">11000</option>
+              <option value="12000">12000</option>
+              <option value="400">400</option>
+              <option value="300">300</option>
+              <option value="200">200</option>
+              <option value="zonk">zonk</option>
+          </select>
+          <button type="submit">Memasang taruhan</button>
+      </form>
+      <div id="betResult"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
